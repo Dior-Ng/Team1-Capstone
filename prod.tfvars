@@ -1,2 +1,2 @@
 bucket_env = "prod"
-bucket_name = "zmw-sctp-prjt-test"
+bucket_name = "diorng-sctp-prjt-test"
