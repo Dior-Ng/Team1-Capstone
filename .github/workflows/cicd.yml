@@ -12,7 +12,7 @@ on:
       - dev
       - uat
       - prod
-      - feature.test
+      
     
 
 jobs:
@@ -26,6 +26,9 @@ jobs:
       - run: echo "The job is automatically triggered by a ${{ github.event_name }} event on ${{github.base_ref || github.ref_name}}  branch." #github.ref_name is the branch name that triggered this workflow
 
   CI:
+
+    needs: Pre-Deploy
+
     runs-on: ubuntu-latest
     
     steps:
@@ -62,6 +65,8 @@ jobs:
 
 #CD - to run only on push on to dev/main branch
   CD:
+
+    needs: CI
     if: ${{ github.event_name == 'push' }}
     runs-on: ubuntu-latest
     steps:
@@ -105,7 +110,7 @@ jobs:
         
       - name: Deploy to AWS S3
         run: aws s3 sync . s3://${{steps.tfout.outputs.s3_bucket_name}} 
-        working-directory: ./static-website
+        working-directory: ./Website-Group1
 
  
 
