@@ -5,7 +5,7 @@
 
 The workflow/Architecture is as the digram below:
  
-<img width="467" alt="only_with_snyk" src="https://github.com/RameshDM86/captone_ramesh_version/assets/137069406/8f4fcdca-10af-46e5-a3be-0aaa20432985">
+<img width="467" alt="only_with_snyk" src="https://github.com/diorng78/zmrepo-rep/assets/137069406/34d0d7aa-54a3-4eb8-8dcc-86f7282368e3">
 
 Architecture
 -	Simple S3 bucket set up in 3 environments
